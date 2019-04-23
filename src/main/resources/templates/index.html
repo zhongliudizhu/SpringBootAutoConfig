@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<a href="details.html" th:href="@{/data/getData}">view</a>
+<table>
+    <tr>
+        <td>userId</td>
+        <td>userName</td>
+        <td>age</td>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.userId}">Onions</td>
+        <td th:text="${user.userName}">2.41</td>
+        <td th:text="${user.age}">yes</td>
+    </tr>
+
+</table>
+
+</body>
+</html>
